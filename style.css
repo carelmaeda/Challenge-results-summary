@@ -1,0 +1,236 @@
+:root {
+    /*COLORS*/
+    
+    /*primary*/
+    --primary-light-red:hsl(0, 100%, 67%);
+    --primary-orangey-yellow:hsl(0, 100%, 67%);
+    --primary-green-teal:hsl(166, 100%, 37%);
+    --primary-cobalt-blue:hsl(234, 85%, 45%);
+    
+    /*GRADIENTS*/
+    --gr-light-slateblue: hsl(252, 100%, 67%);
+    --gr-light-royalblue: hsl(241, 81%, 54%);
+    --gr-violet-blue: hsla(256, 72%, 46%, 1);
+    --gr-persian-blue: hsla(241, 72%, 46%, 0);
+
+    /*Neutral*/
+    --neutral-white-brand: hsl(0, 0%, 100%);
+    --neutral-pale-blue: hsl(221, 100%, 96%);
+    --neutral-light-lavender: hsl(241, 100%, 89%);
+    --neutral-dark-greyblue: hsl(224, 30%, 27%);
+
+    /*TYPOGRAPHY*/
+    --font-size-primary: 18px;
+    --font-family-primary:'Hanken Grotesk', sans-serif;
+    --font-color:#202124;
+
+    /*BREAKPOINTS*/
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+ 
+}
+
+
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-primary);
+}
+
+.container{
+    background-color: var(--neutral-white-brand);
+    border-radius: 25px;
+}
+
+.card-wrapper {
+    width: 100%;
+    max-width: var(--mobile-width);
+    margin: auto;
+    -webkit-box-shadow: 0px 12px 29px -13px rgba(0,0,0,0.5);
+    box-shadow: 0px 12px 29px -13px rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+
+
+/*TYPOGRAPHY*/
+
+
+h1{
+    font-size: 3.37rem;
+    line-height: 1;
+    display: block;
+    color: var(--neutral-white-brand);
+}
+
+h2{
+    font-size: 1.5rem;
+    display: block;
+    color: var(--neutral-white-brand);
+}
+
+h3{
+    color: var(--neutral-white-brand);
+}
+
+p, .text-small{
+    color:rgb(205, 204, 201);
+}
+
+.text-small{
+    font-size:1rem;
+}
+
+
+
+
+/*HEADER*/
+
+.header{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    align-content: center;
+
+    gap:2rem;
+    border-radius: 0 0 25px 25px;
+    padding:2rem;
+
+    background-image: linear-gradient(var(--gr-light-slateblue), var(--gr-light-royalblue));
+    -webkit-box-shadow: 0px 12px 29px -13px rgba(0,0,0,0.5); 
+    box-shadow: 0px 12px 29px -13px rgba(0,0,0,0.5);
+}
+
+.results{
+    display: grid;
+    place-content: center;
+
+    height: 120px;
+    aspect-ratio: 1/1;
+    padding:0.5rem;
+    background-image: linear-gradient(var(--gr-violet-blue), var(--gr-persian-blue));
+    border-radius: 500px;
+}
+
+/* Summary */
+
+.summary-grid{
+    padding: 2rem 1rem;
+    display: grid;
+    width: 100%;
+    margin: auto;
+    gap:1.2rem;
+    font-weight: 800;
+    background-color: transparent;
+}
+
+.summary-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+
+}
+
+.summary-item{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.reaction{
+    color:var(--primary-light-red);
+    background-color:hsla(0, 100%, 67%, 0.1)
+}
+
+.memory{
+    color:var(--primary-orangey-yellow);
+    background-color:hsla(39, 100%, 56%, 0.1)
+}
+
+.verbal{
+    color:var(--primary-green-teal);
+    background-color:hsla(166, 100%, 37%, 0.1)
+}
+
+.visual{
+    color:var(--primary-cobalt-blue);
+    background-color:hsla(234, 85%, 45%, 0.1)
+}
+
+
+/* Buttons */
+
+.btn-primary{
+    background-color: var(--neutral-dark-greyblue);
+    color: var(--neutral-white-brand);
+    width: 100%;
+    padding: 1rem;
+    border-radius: 100px;
+    font-weight: 700;
+    margin-block:1rem;
+    border:transparent;
+}
+
+.btn-primary:hover{
+    background-image: linear-gradient(var(--gr-light-slateblue), var(--gr-light-royalblue));
+    cursor: pointer;
+    border:none;
+}
+
+/* Footer */
+
+.footer{
+    margin-top: 3rem;
+    display: block;
+    text-align: center;
+}
+
+
+/* DESKTOP VIEW */
+
+
+@media only screen and (min-width: 700px) {
+
+    body{
+        background-color: antiquewhite;
+    }
+
+    .container{
+        max-width: 900px;
+        margin: 3rem auto;
+    }
+    
+    .card-wrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 900px;
+
+        border-radius: 25px;
+    }
+
+    .card-wrapper {
+        width: 100%;
+      
+        margin: auto;
+    }
+    
+
+    /*HEADER*/
+
+.header{
+    display: grid;
+    border-radius: 25px;
+}
+
+
+
+  }
